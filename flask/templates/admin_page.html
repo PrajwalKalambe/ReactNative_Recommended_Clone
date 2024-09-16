@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="../static/loader.js"></script>
+    <link rel="stylesheet" href="../static/loader.css">
+    <style>
+        body {
+            background-color: #949bff;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .card {
+            margin-bottom: 20px;
+            background-color:#b7bae459;
+
+        }
+
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 30px;
+            border: 2px solid;
+        }
+
+        .Btn {
+            display: flex;
+            margin: 15px;
+            align-items: center;
+            justify-content: flex-start;
+            width: 45px;
+            height: 45px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition-duration: .3s;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+            background-color: rgb(255, 65, 65);
+        }
+
+        /* plus sign */
+        .sign {
+            width: 100%;
+            transition-duration: .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .sign svg {
+            width: 17px;
+        }
+
+        .sign svg path {
+            fill: white;
+        }
+
+        /* text */
+        .text {
+            position: absolute;
+            right: 0%;
+            width: 0%;
+            opacity: 0;
+            color: white;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition-duration: .3s;
+        }
+
+        /* hover effect on button width */
+        .Btn:hover {
+            width: 125px;
+            border-radius: 40px;
+            transition-duration: .3s;
+        }
+
+        .Btn:hover .sign {
+            width: 30%;
+            transition-duration: .3s;
+            padding-left: 20px;
+        }
+
+        /* hover effect button's text */
+        .Btn:hover .text {
+            opacity: 1;
+            width: 70%;
+            transition-duration: .3s;
+            padding-right: 10px;
+        }
+
+        /* button click effect*/
+        .Btn:active {
+            transform: translate(2px, 2px);
+        }
+        a{
+            color: white;
+            text-decoration: none;
+        }
+        a:hover{
+            color: black;
+
+            text-decoration: none;
+        }
+        
+        .product{
+            position: absolute;
+            right: 15px;
+            top:8px;
+            padding: 3px;
+            margin: 15px;
+            border-radius: 10px;
+            color: rgb(240, 234, 234);
+            background-color: green;
+        }
+        /* new css for background */
+        @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
+
+body  {
+    background-image: url('https://static.pexels.com/photos/414171/pexels-photo-414171.jpeg');
+  background-size:cover;
+        -webkit-animation: slidein 100s;
+        animation: slidein 100s;
+
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;              
+}
+
+@-webkit-keyframes slidein {
+from {background-position: top; background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+}
+
+@keyframes slidein {
+from {background-position: top;background-size:3000px; }
+to {background-position: -100px 0px;background-size:2750px;}
+
+}
+
+
+
+.center
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(75, 75, 250, 0.3);
+  border-radius: 3px;
+}
+.center h1{
+  text-align:center;
+  color:white;
+  font-family: 'Source Code Pro', monospace;
+  text-transform:uppercase;
+}
+    
+    </style>
+</head>
+
+<body>
+    <div class="center"></div>
+    
+    <form action="{{url_for('logout')}}" class="form">
+        <button class="Btn button" id="logout">
+
+            <div class="sign"><svg viewBox="0 0 512 512">
+                    <path
+                        d="M377.9 105.9L500.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L377.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1-128 0c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM160 96L96 96c-17.7 0-32 14.3-32 32l0 256c0 17.7 14.3 32 32 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32l-64 0c-53 0-96-43-96-96L0 128C0 75 43 32 96 32l64 0c17.7 0 32 14.3 32 32s-14.3 32-32 32z">
+                    </path>
+                </svg></div>
+
+            <div class="text">Logout</div>
+        </button>
+    </form>
+
+    <button class="btn product"><a href="{{ url_for('visionA') }}" class="button">Show Products</a></button>
+    {% block content %}
+    <div class="container">
+        {% for message in get_flashed_messages() %}
+        <div class="alert alert-warning">
+            <button type="button" class="close " data-dismiss="alert">&times;</button>
+            {{ message }}
+        </div>
+        {% endfor %}
+
+        {% block page_content %}{% endblock %}
+    </div>
+    {% endblock %}
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Upload a CSV File</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="{{url_for('uploadCSV')}}" class="form" method="post"
+                            enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="file" name="csvFile" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block button"
+                                id="CSVupload">Upload</button>
+                        </form>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Add Product to Database</h3>
+                    </div>
+                    <div class="card-body">
+                        <form action="{{url_for('AddProduct')}}" method="post" class="form">
+                            <div class="form-group">
+                                <label for="productName">Product Name:</label>
+                                <input type="text" name="product_name" id="productName" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="imageUrl">Image URL:</label>
+                                <input type="text" name="image_url" id="imageUrl" class="form-control" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block button" id="AddProduct">Add
+                                Product</button>
+
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- <div id="overlay" class="overlay"></div>
+    <div id="spinner" class="spinner center"></div> -->
+    <div id="overlay" class="overlay"></div>
+    <div aria-live="assertive" role="alert" class="loader center"></div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

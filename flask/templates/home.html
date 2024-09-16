@@ -1,0 +1,45 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <span>E-Kart aPP</span>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('login') }}"><button class="btn btn-primary">Login</button></a></li>
+            <li><a href="{{ url_for('signup') }}"><button class="btn btn-primary">Sign Up</button></a></li>
+        </ul>
+    </nav>
+    <h1>Welcome to the Homepage</h1>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Site</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="..\static\loader.css">
+    <script src="../static/loader.js"></script>
+</head>
+<body>
+    <div id="overlay" class="overlay"></div>
+    <div aria-live="assertive" role="alert" class="loader center"></div>
+    <nav class="navbar">
+        <img src="https://static.ambitionbox.com/assets/v2/images/rs:fit:1280:960:false:false/bG9jYWw6Ly8vbG9nb3Mvb3JpZ2luYWxzL2RlbGFwbGV4LXNvZnR3YXJlLmpwZw.png" id="logo" alt="logo">
+        <div class="navbar-title"><h1>DELA-CART</h1></div>
+        <div class="navbar-links">
+            <a href="{{ url_for('signup') }}" class="btn">Sign Up</a>
+            <a href="{{ url_for('login') }}" class="btn">Login</a>
+        </div>
+    </nav>
+   
+</body>
+</html>

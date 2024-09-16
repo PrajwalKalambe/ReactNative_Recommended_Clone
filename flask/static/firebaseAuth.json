@@ -1,0 +1,9 @@
+{   "type":"service_account",
+    "apiKey": "AIzaSyBRuhO-cnA9OMIaFbxjvcHyjw9oxKdt2H4",
+    "authDomain": "recommendvision.firebaseapp.com",
+    "projectId": "recommendvision",
+    "storageBucket": "recommendvision.appspot.com",
+    "messagingSenderId": "693961857647",
+    "appId": "1:693961857647:web:a7bcba6b92dfb161b90b9a"
+  }
+  
